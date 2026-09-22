@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>smPosting</title>
+<style>
+  :root {
+    --bg: #0B1220;
+    --panel: #131C2E;
+    --border: #22304A;
+    --text: #E4E9F2;
+    --muted: #8794A8;
+    --accent: #33D6A0;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, "Segoe UI", Inter, sans-serif;
+    line-height: 1.6;
+  }
+  .mono { font-family: ui-monospace, "SF Mono", "JetBrains Mono", Menlo, monospace; }
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 32px;
+    border-bottom: 1px solid var(--border);
+    max-width: 880px;
+    margin: 0 auto;
+  }
+  header .logo { font-weight: 600; font-size: 16px; letter-spacing: -0.01em; }
+  header .logo span { color: var(--accent); }
+  nav a {
+    color: var(--muted);
+    text-decoration: none;
+    margin-left: 24px;
+    font-size: 14px;
+  }
+  nav a:hover { color: var(--text); }
+  main { max-width: 880px; margin: 0 auto; padding: 0 32px; }
+  .hero { padding: 80px 0 56px; }
+  .hero .tag {
+    display: inline-block;
+    font-size: 13px;
+    color: var(--accent);
+    background: rgba(51,214,160,0.08);
+    border: 1px solid rgba(51,214,160,0.25);
+    padding: 4px 10px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+  }
+  h1 {
+    font-size: 40px;
+    line-height: 1.15;
+    margin: 0 0 20px;
+    max-width: 15ch;
+    font-weight: 600;
+    letter-spacing: -0.015em;
+  }
+  .hero p {
+    font-size: 17px;
+    color: var(--muted);
+    max-width: 56ch;
+    margin: 0;
+  }
+  .flow {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0;
+    margin: 48px 0 64px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  .flow-step {
+    flex: 1;
+    min-width: 180px;
+    padding: 22px 20px;
+    border-right: 1px solid var(--border);
+    background: var(--panel);
+  }
+  .flow-step:last-child { border-right: none; }
+  .flow-step .n {
+    font-size: 12px;
+    color: var(--accent);
+  }
+  .flow-step h3 {
+    font-size: 15px;
+    margin: 8px 0 6px;
+    font-weight: 600;
+  }
+  .flow-step p {
+    font-size: 13.5px;
+    color: var(--muted);
+    margin: 0;
+  }
+  section.about { padding-bottom: 72px; }
+  section.about h2 {
+    font-size: 15px;
+    color: var(--muted);
+    text-transform: none;
+    font-weight: 600;
+    margin-bottom: 14px;
+  }
+  section.about p {
+    font-size: 15.5px;
+    color: var(--text);
+    max-width: 62ch;
+    margin: 0 0 16px;
+  }
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 28px 32px;
+    max-width: 880px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    color: var(--muted);
+    font-size: 13px;
+  }
+  footer a { color: var(--muted); margin-left: 18px; text-decoration: none; }
+  footer a:hover { color: var(--text); }
+  @media (max-width: 600px) {
+    h1 { font-size: 30px; }
+    header, main, footer { padding-left: 20px; padding-right: 20px; }
+    .flow-step { border-right: none; border-bottom: 1px solid var(--border); }
+    .flow-step:last-child { border-bottom: none; }
+    footer { flex-direction: column; gap: 12px; }
+    footer a { margin-left: 0; margin-right: 16px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">sm<span>Posting</span></div>
+  <nav>
+    <a href="terms.html">Terms</a>
+    <a href="privacy.html">Privacy</a>
+  </nav>
+</header>
+
+<main>
+  <div class="hero">
+    <span class="tag mono">personal &middot; single account</span>
+    <h1>One place to queue and publish your own posts.</h1>
+    <p>smPosting is a personal scheduling tool that takes a video or image with a caption and a time, and publishes it to your own connected social accounts &mdash; automatically, without you opening each app.</p>
+  </div>
+
+  <div class="flow">
+    <div class="flow-step">
+      <div class="n mono">01</div>
+      <h3>Send</h3>
+      <p>You send the content, caption, and either a time or "now" through a private control channel.</p>
+    </div>
+    <div class="flow-step">
+      <div class="n mono">02</div>
+      <h3>Queue</h3>
+      <p>The post is checked against each platform's requirements and held until its scheduled time.</p>
+    </div>
+    <div class="flow-step">
+      <div class="n mono">03</div>
+      <h3>Publish</h3>
+      <p>At the right time, it's published directly to your connected accounts, and you're notified.</p>
+    </div>
+  </div>
+
+  <section class="about">
+    <h2>About this tool</h2>
+    <p>smPosting is built and operated by a single person for their own accounts. It does not manage content for other users, and it does not read, collect, or act on data belonging to anyone other than its owner.</p>
+    <p>It currently supports scheduled and immediate publishing to TikTok, alongside other connected platforms, from one queue.</p>
+  </section>
+</main>
+
+<footer>
+  <span>&copy; 2026 smPosting &mdash; Muhammad Bilal Nadeem</span>
+  <span>
+    <a href="terms.html">Terms of Service</a>
+    <a href="privacy.html">Privacy Policy</a>
+  </span>
+</footer>
+
+</body>
+</html>

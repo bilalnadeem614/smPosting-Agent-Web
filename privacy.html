@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy &mdash; smPosting</title>
+<style>
+  :root {
+    --bg: #0B1220; --panel: #131C2E; --border: #22304A;
+    --text: #E4E9F2; --muted: #8794A8; --accent: #33D6A0;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font-family: -apple-system, "Segoe UI", Inter, sans-serif; line-height: 1.6;
+  }
+  header {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 24px 32px; border-bottom: 1px solid var(--border);
+    max-width: 720px; margin: 0 auto;
+  }
+  header .logo { font-weight: 600; font-size: 16px; }
+  header .logo span { color: var(--accent); }
+  nav a { color: var(--muted); text-decoration: none; margin-left: 24px; font-size: 14px; }
+  nav a:hover { color: var(--text); }
+  main { max-width: 720px; margin: 0 auto; padding: 56px 32px 80px; }
+  h1 { font-size: 28px; margin: 0 0 6px; font-weight: 600; }
+  .updated { color: var(--muted); font-size: 13.5px; margin-bottom: 40px; }
+  h2 { font-size: 16px; margin: 36px 0 10px; font-weight: 600; }
+  p, li { font-size: 15px; color: var(--text); margin: 0 0 12px; }
+  ul { padding-left: 20px; margin: 0 0 12px; }
+  .callout {
+    border: 1px solid rgba(51,214,160,0.3);
+    background: rgba(51,214,160,0.06);
+    border-radius: 8px;
+    padding: 16px 18px;
+    margin: 20px 0;
+  }
+  .callout p { margin: 0; font-size: 14.5px; }
+  a.inline { color: var(--accent); }
+  @media (max-width: 600px) { header, main { padding-left: 20px; padding-right: 20px; } }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">sm<span>Posting</span></div>
+  <nav><a href="index.html">Home</a><a href="terms.html">Terms</a></nav>
+</header>
+
+<main>
+  <h1>Privacy Policy</h1>
+  <p class="updated">Last updated September 2026</p>
+
+  <h2>1. Who this covers</h2>
+  <p>smPosting is a personal automation tool with a single owner and operator, Muhammad Bilal Nadeem. It is not a multi-user service. This policy explains how data is handled for the one account that operates it.</p>
+
+  <h2>2. What data is processed</h2>
+  <ul>
+    <li>Content the owner submits for posting: video/image files, captions, and scheduling times.</li>
+    <li>Authorization tokens (access and refresh tokens) for the social accounts the owner has connected, including TikTok, obtained through each platform's official OAuth flow.</li>
+    <li>Basic posting status and history (e.g. which platform a post was published to, and when).</li>
+  </ul>
+
+  <div class="callout">
+    <p><strong>TikTok data specifically:</strong> Data obtained through the TikTok API (including access tokens and any profile or video information returned by it) is used solely to publish content to the owner's own authorized TikTok account. It is never sold, shared with third parties, used for advertising, or used to build a profile of any user beyond what is required to operate this single connected account.</p>
+  </div>
+
+  <h2>3. What is not collected</h2>
+  <p>smPosting does not collect data from visitors to this website. There is no analytics tracking, no advertising, and no cookies used for tracking purposes on this site.</p>
+
+  <h2>4. Storage and security</h2>
+  <p>Authorization tokens and post data are stored in a private, access-controlled automation environment operated by the owner. They are not exposed publicly and are not accessible to any third party.</p>
+
+  <h2>5. Data retention</h2>
+  <p>Tokens are retained only as long as needed to operate the connected account and are replaced automatically as platforms rotate them. The owner can revoke access at any time directly from the connected platform's own account settings (e.g. TikTok's app permissions page), which immediately invalidates smPosting's access.</p>
+
+  <h2>6. Third parties</h2>
+  <p>Data is shared only with the platforms the owner explicitly connects (e.g. TikTok, Meta), and only as required to publish the content the owner submitted. No data is sold or shared for any other purpose.</p>
+
+  <h2>7. Contact</h2>
+  <p>Questions about this policy, or requests to review or delete stored data, can be directed to the owner via the contact details on the <a class="inline" href="index.html">home page</a>.</p>
+</main>
+
+</body>
+</html>
