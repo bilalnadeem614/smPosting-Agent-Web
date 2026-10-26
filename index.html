@@ -4,6 +4,23 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>smPosting</title>
+<meta name="description" content="smPosting is a personal scheduling tool that publishes your own posts to your connected social accounts.">
+<meta name="theme-color" content="#0B1220">
+
+<!-- Favicon -->
+<link rel="icon" type="image/jpeg" href="logo.jpeg">
+<link rel="shortcut icon" href="logo.jpeg">
+<link rel="apple-touch-icon" href="logo.jpeg">
+
+<!-- Social preview -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="smPosting">
+<meta property="og:description" content="One place to queue and publish your own posts.">
+<meta property="og:image" content="https://smposting-agent.vercel.app/logo.jpeg">
+<meta property="og:url" content="https://smposting-agent.vercel.app/">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://smposting-agent.vercel.app/logo.jpeg">
+
 <style>
   :root {
     --bg: #0B1220;
@@ -22,6 +39,7 @@
     line-height: 1.6;
   }
   .mono { font-family: ui-monospace, "SF Mono", "JetBrains Mono", Menlo, monospace; }
+
   header {
     display: flex;
     justify-content: space-between;
@@ -31,8 +49,24 @@
     max-width: 880px;
     margin: 0 auto;
   }
-  header .logo { font-weight: 600; font-size: 16px; letter-spacing: -0.01em; }
-  header .logo span { color: var(--accent); }
+  header .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: -0.01em;
+    color: var(--text);
+    text-decoration: none;
+  }
+  header .logo img {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    object-fit: cover;
+    display: block;
+  }
+  header .logo .brand span { color: var(--accent); }
   nav a {
     color: var(--muted);
     text-decoration: none;
@@ -40,7 +74,9 @@
     font-size: 14px;
   }
   nav a:hover { color: var(--text); }
+
   main { max-width: 880px; margin: 0 auto; padding: 0 32px; }
+
   .hero { padding: 80px 0 56px; }
   .hero .tag {
     display: inline-block;
@@ -66,6 +102,7 @@
     max-width: 56ch;
     margin: 0;
   }
+
   .flow {
     display: flex;
     flex-wrap: wrap;
@@ -97,6 +134,7 @@
     color: var(--muted);
     margin: 0;
   }
+
   section.about { padding-bottom: 72px; }
   section.about h2 {
     font-size: 15px;
@@ -111,6 +149,7 @@
     max-width: 62ch;
     margin: 0 0 16px;
   }
+
   footer {
     border-top: 1px solid var(--border);
     padding: 28px 32px;
@@ -123,6 +162,7 @@
   }
   footer a { color: var(--muted); margin-left: 18px; text-decoration: none; }
   footer a:hover { color: var(--text); }
+
   @media (max-width: 600px) {
     h1 { font-size: 30px; }
     header, main, footer { padding-left: 20px; padding-right: 20px; }
@@ -136,7 +176,10 @@
 <body>
 
 <header>
-  <div class="logo">sm<span>Posting</span></div>
+  <a class="logo" href="index.html">
+    <img src="logo.jpeg" alt="smPosting logo" width="32" height="32">
+    <span class="brand">sm<span>Posting</span></span>
+  </a>
   <nav>
     <a href="terms.html">Terms</a>
     <a href="privacy.html">Privacy</a>
