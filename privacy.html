@@ -4,6 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Privacy Policy &mdash; smPosting</title>
+<meta name="theme-color" content="#0B1220">
+
+<!-- Favicon -->
+<link rel="icon" type="image/jpeg" href="logo.jpeg">
+<link rel="shortcut icon" href="logo.jpeg">
+<link rel="apple-touch-icon" href="logo.jpeg">
+
 <style>
   :root {
     --bg: #0B1220; --panel: #131C2E; --border: #22304A;
@@ -19,8 +26,16 @@
     padding: 24px 32px; border-bottom: 1px solid var(--border);
     max-width: 720px; margin: 0 auto;
   }
-  header .logo { font-weight: 600; font-size: 16px; }
-  header .logo span { color: var(--accent); }
+  header .logo {
+    display: flex; align-items: center; gap: 10px;
+    font-weight: 600; font-size: 16px;
+    color: var(--text); text-decoration: none;
+  }
+  header .logo img {
+    width: 32px; height: 32px; border-radius: 8px;
+    object-fit: cover; display: block;
+  }
+  header .logo .brand span { color: var(--accent); }
   nav a { color: var(--muted); text-decoration: none; margin-left: 24px; font-size: 14px; }
   nav a:hover { color: var(--text); }
   main { max-width: 720px; margin: 0 auto; padding: 56px 32px 80px; }
@@ -44,7 +59,10 @@
 <body>
 
 <header>
-  <div class="logo">sm<span>Posting</span></div>
+  <a class="logo" href="index.html">
+    <img src="logo.jpeg" alt="smPosting logo" width="32" height="32">
+    <span class="brand">sm<span>Posting</span></span>
+  </a>
   <nav><a href="index.html">Home</a><a href="terms.html">Terms</a></nav>
 </header>
 
