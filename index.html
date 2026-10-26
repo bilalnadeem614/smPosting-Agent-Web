@@ -44,7 +44,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 24px 32px;
+    padding: 20px 32px;
     border-bottom: 1px solid var(--border);
     max-width: 880px;
     margin: 0 auto;
@@ -52,18 +52,17 @@
   header .logo {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
     font-weight: 600;
-    font-size: 16px;
+    font-size: 18px;
     letter-spacing: -0.01em;
     color: var(--text);
     text-decoration: none;
   }
   header .logo img {
-    width: 32px;
-    height: 32px;
-    border-radius: 8px;
-    object-fit: cover;
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
     display: block;
   }
   header .logo .brand span { color: var(--accent); }
@@ -77,7 +76,14 @@
 
   main { max-width: 880px; margin: 0 auto; padding: 0 32px; }
 
-  .hero { padding: 80px 0 56px; }
+  .hero { padding: 64px 0 56px; }
+  .hero-logo {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    display: block;
+    margin-bottom: 28px;
+  }
   .hero .tag {
     display: inline-block;
     font-size: 13px;
@@ -166,6 +172,7 @@
   @media (max-width: 600px) {
     h1 { font-size: 30px; }
     header, main, footer { padding-left: 20px; padding-right: 20px; }
+    .hero-logo { width: 96px; height: 96px; }
     .flow-step { border-right: none; border-bottom: 1px solid var(--border); }
     .flow-step:last-child { border-bottom: none; }
     footer { flex-direction: column; gap: 12px; }
@@ -177,7 +184,7 @@
 
 <header>
   <a class="logo" href="index.html">
-    <img src="logo.jpeg" alt="smPosting logo" width="32" height="32">
+    <img src="logo.jpeg" alt="smPosting logo" width="48" height="48">
     <span class="brand">sm<span>Posting</span></span>
   </a>
   <nav>
@@ -188,6 +195,7 @@
 
 <main>
   <div class="hero">
+    <img class="hero-logo" src="logo.jpeg" alt="smPosting logo" width="120" height="120">
     <span class="tag mono">personal &middot; single account</span>
     <h1>One place to queue and publish your own posts.</h1>
     <p>smPosting is a personal scheduling tool that takes a video or image with a caption and a time, and publishes it to your own connected social accounts &mdash; automatically, without you opening each app.</p>
